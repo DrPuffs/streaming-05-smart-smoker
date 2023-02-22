@@ -1,9 +1,9 @@
 """
     This program listens for work messages contiously. 
-    Start multiple versions to add more workers.  
+    Monitoring the temperature of the smoker.  
 
-    Author: Denise Case
-    Date: January 15, 2023
+    Author: Ryan Shaw
+    Date: February 21, 2023
 
 """
 
@@ -21,50 +21,44 @@ smoker_deque = deque(maxlen = 5)
 def smoker_callback(ch, method, properties, body):
     """ Define behavior on getting a message."""
 
-    #The first 4 values is less than our 2.5 min check time. This if statement allows us to skip over the first 4 values without comparing them.
-    if len(smoker_deque) < 5:
-
-        smoker_deque.append(body.decode())
-
-    #Once the deque reaches a length of 5, we want to start monitoring the temps.
-    else:
+    
         #Adds incoming message to deque after decoding it.
-        smoker_deque.append(body.decode())
+    smoker_deque.append(body.decode())
 
         #Assigns the first value in our deque to smoker_message variable.
-        smoker_message = smoker_deque[0]
+    smoker_message = smoker_deque[0]
     
         #Assigns the virst 18 values or our smoker_message(which makes up the date/time) to a new variable.
-        smoker_time_old = smoker_message[0:17]
+    smoker_time_old = smoker_message[0:17]
 
         #Assigns the remaining values of our smoker_message(which is the smoker temperature) to a new variable.
-        smoker_temp_old = smoker_message[19:]
+    smoker_temp_old = smoker_message[19:]
 
-        print(smoker_temp_old[18:])
+    print(smoker_temp_old[18:])
 
 
         #Assigns the current message to a variable after decoding it.
-        smoker_current = body.decode()
+    smoker_current = body.decode()
 
         #Assigns the virst 18 values or our smoker_message(which makes up the date/time) to a new variable.
-        smoker_time_current = smoker_current[0:17]
+    smoker_time_current = smoker_current[0:17]
 
         #Assigns the remaining values of our smoker_message(which is the smoker temperature) to a new variable.
-        smoker_temp_current = smoker_current[19:]
+    smoker_temp_current = smoker_current[19:]
 
-        print(smoker_temp_current)
+    print(smoker_temp_current)
 
         #Calculates the difference between our current temperature and the temperature from 5 values(2.5 minutes) ago.
-        temp_difference = smoker_temp_old = smoker_temp_current
+    temp_difference = smoker_temp_old = smoker_temp_current
 
-        print(temp_difference)
+    print(temp_difference)
 
         #Changes temp_difference to a float.
-        temp_difference = float(temp_difference)
+    temp_difference = float(temp_difference)
 
         #Alerts us if the temp_difference is more than 15.
-        if temp_difference > 15:
-            print('Alert! Your smoker temperature has dropped too much!')
+    if temp_difference > 15:
+        print('Alert! Your smoker temperature has dropped too much!')
 
 
 

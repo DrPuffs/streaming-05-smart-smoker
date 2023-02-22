@@ -1,19 +1,62 @@
 """
-    This program listens for work messages contiously. 
-    Start multiple versions to add more workers.  
+    This program listens for work messages contiously.
+    Monitoring the temperature of Food A.  
 
-    Author: Denise Case
-    Date: January 15, 2023
+    Author: Ryan Shaw
+    Date: February 21, 2023
 
 """
 
 import pika
 import sys
 import time
+from collections import deque
+
+foodA_deque = deque(maxlen = 20)
 
 # define a callback function to be called when a message is received
 def foodA_callback(ch, method, properties, body):
     """ Define behavior on getting a message."""
+    
+
+    foodA_deque.append(body.decode())
+
+
+    foodA_message = foodA_deque[0]
+    
+    
+    
+
+    foodA_time_old = foodA_message[0:17]
+
+    foodA_temp_old = foodA_message[19:]
+
+    print(foodA_temp_old[18:])
+
+
+    
+    foodA_current = body.decode()
+
+    foodA_time_current = foodA_current[0:17]
+
+    foodA_temp_current = foodA_current[19:]
+
+    print(foodA_temp_current)
+
+
+    temp_difference = foodA_temp_old = foodA_temp_current
+
+    print(temp_difference)
+
+    if temp_difference != '':
+
+        temp_difference = float(temp_difference)
+
+        if temp_difference < 1:
+                print('Alert! Your Food A temperature has stalled!')
+
+
+
     # decode the binary message body to a string
     print(f" [x] Received {body.decode()}")
     # simulate work by sleeping for the number of dots in the message
