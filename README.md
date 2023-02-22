@@ -15,25 +15,25 @@
 ## Assignment 6: Finishing the Smart Smoker
 
 
-Clickable link to your public GitHub repo(s) with custom README and displayed screenshots: https://github.com/DrPuffs/streaming-05-smart-smoker
-About how long did you spend this module: 3 days.
-Did you use one consumer with 3 queues (or 3 consumers each with one queue): 3 consumers with 1 queue.
-Why: Less confusing for me.
-When did a Smoker Alert occur: When the temperature dropped by more than 15. It did this several times. My screenshot shows it dropping by 18.8 and 26.7.
-When did a Food A stall occur: The first time the temperature changed by 0.6 degrees.
-When did a Food B stall occur: The first time the temperature changed by 0.4 degrees.
-What was most difficult about this module: TYPEERRORS. I will never get these right the first try it seems.
-What was most interesting: Utilziing deque.
-In a real system, you'd want to get alerts from your smart smoker - maybe a text message.
-Did you experiment with adding alerts to the project and getting an email or text when the smoker alerted? No. Unfortunately, I did not have time.
-Would you be able to add this feature if implementing a similar system in real life? I believe that I could and I plan to do so for the project if time allows.
+Clickable link to your public GitHub repo(s) with custom README and displayed screenshots: https://github.com/DrPuffs/streaming-05-smart-smoker <br>
+About how long did you spend this module: 3 days. <br>
+Did you use one consumer with 3 queues (or 3 consumers each with one queue): 3 consumers with 1 queue. <br>
+Why: Less confusing for me. <br>
+When did a Smoker Alert occur: When the temperature dropped by more than 15. It did this several times. My screenshot shows it dropping by 18.8 and 26.7. <br>
+When did a Food A stall occur: The first time the temperature changed by 0.6 degrees. <br>
+When did a Food B stall occur: The first time the temperature changed by 0.4 degrees. <br>
+What was most difficult about this module: TYPEERRORS. I will never get these right the first try it seems. <br>
+What was most interesting: Utilziing deque. <br>
+In a real system, you'd want to get alerts from your smart smoker - maybe a text message. <br>
+Did you experiment with adding alerts to the project and getting an email or text when the smoker alerted? No. Unfortunately, I did not have time. <br>
+Would you be able to add this feature if implementing a similar system in real life? I believe that I could and I plan to do so for the project if time allows. <br>
 
 
 Smart Smoker Producer:
-![Smart Smoker Producer](Smoker%Producer.png)
+![Smart Smoker Producer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker%Producer.png)
 Smoker Consumer:
-![Smoker Consumer](Smoker%Consumer.png)
+![Smoker Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker%Consumer.png)
 Food A Consumer:
-![Food A Consumer](Food%A%Consumer.png)
+![Food A Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%A%Consumer.png)
 Food B Consumer:
-![Food B Consumer](Food%B%Consumer.png)
+![Food B Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%B%Consumer.png)
