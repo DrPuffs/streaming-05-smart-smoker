@@ -58,7 +58,7 @@ def send_message(host: str, queue_name: str, message: str):
         conn.close()
 
 # Opens CSV file and cycles through it while skipping the header row
-with open("smoker-temps.csv", "r") as import_file:
+with open("C:\\Users\\User\\Desktop\\streaming-05-smart-smoker\\smoker-temps.csv", "r") as import_file:
     reader = csv.reader(import_file, delimiter=',')
     next(reader, None)
     offer_rabbitmq_admin_site()
@@ -75,13 +75,14 @@ with open("smoker-temps.csv", "r") as import_file:
 
             
         
+         
             smoker_temp_message = (Time, Smoker_Temp)
             foodA_temp_message = (Time, FoodA_Temp)
             foodB_temp_message = (Time, FoodB_Temp)
 
-            smoker_temp_message2 = ''.join(smoker_temp_message)
-            foodA_temp_message2 = ''.join(foodA_temp_message)
-            foodB_temp_message2 = ''.join(foodB_temp_message)
+            smoker_temp_message2 = ' '.join(smoker_temp_message)
+            foodA_temp_message2 = ' '.join(foodA_temp_message)
+            foodB_temp_message2 = ' '.join(foodB_temp_message)
 
 
             if Smoker_Temp != '':
