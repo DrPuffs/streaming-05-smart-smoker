@@ -30,10 +30,10 @@ Would you be able to add this feature if implementing a similar system in real l
 
 
 Smart Smoker Producer:
-![Smart Smoker Producer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker%Producer.png)
+![Smart Smoker Producer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker%20Producer.png)
 Smoker Consumer:
-![Smoker Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker%Consumer.png)
+![Smoker Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Smoker_Consumer.py)
 Food A Consumer:
-![Food A Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%A%Consumer.png)
+![Food A Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%20A%20Consumer.png)
 Food B Consumer:
-![Food B Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%B%Consumer.png)
+![Food B Consumer](https://github.com/DrPuffs/streaming-05-smart-smoker/blob/main/Food%20B%20Consumer.png)
